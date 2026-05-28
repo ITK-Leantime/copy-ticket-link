@@ -31,8 +31,8 @@ EventDispatcher::add_event_listener(
         // placeholder is left as-is, which would freeze the URL and let the
         // browser cache forever; fall back to the asset's mtime so every
         // edit produces a fresh URL.
-        $jsPath = __DIR__ . '/dist/js/copy-ticket-link.js';
-        $cssPath = __DIR__ . '/dist/css/copy-ticket-link.css';
+        $jsPath = __DIR__ . '/assets/copy-ticket-link.js';
+        $cssPath = __DIR__ . '/assets/copy-ticket-link.css';
         $jsVersion = '%%VERSION%%';
         $cssVersion = '%%VERSION%%';
         if ($jsVersion === '%' . '%VERSION%' . '%' && is_file($jsPath)) {

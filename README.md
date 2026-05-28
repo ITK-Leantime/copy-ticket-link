@@ -25,8 +25,8 @@ for non-HTTPS contexts) and flashes success / error styling for ~1.5 s.
 ## Install
 
 Enable the plugin from **Settings → Plugins**. The plugin's `install()` hook
-symlinks `dist/js/copy-ticket-link.js` and `dist/css/copy-ticket-link.css`
-into `public/dist/` so the asset URLs resolve.
+symlinks `assets/copy-ticket-link.js` and `assets/copy-ticket-link.css` into
+`public/dist/` so the asset URLs resolve.
 
 No configuration is required.
 
