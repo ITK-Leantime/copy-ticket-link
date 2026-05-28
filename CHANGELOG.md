@@ -2,8 +2,5 @@
 
 ## [Unreleased]
 
-* Initial release.
-  * Adds a "copy link" button to Leantime's ticket modal.
-  * Copies a plain `<origin>/#/tickets/showTicket/<id>` URL to the clipboard,
-    so shared links open the ticket directly instead of first loading
-    whatever contextual page the linker was on.
+* [PR-1](https://github.com/ITK-Leantime/copy-ticket-link/pull/1)
+  * Initial release.
