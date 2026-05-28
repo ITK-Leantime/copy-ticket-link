@@ -14,17 +14,18 @@ loading whatever page the linker happened to be on.
 
 ## How it works
 
-The plugin ships a single vanilla-JS file (no build step, no dependencies).
 On every authenticated page load, the asset is included via the standard
-`afterScriptLibTags` event. The script listens for `hashchange`. When the
-hash matches `#/tickets/showTicket/<id>`, the script waits for nyroModal's
-`.nyroModalCont` wrapper to render and injects a button into it. The button
-uses the async clipboard API (with a `document.execCommand('copy')` fallback
+`afterScriptLibTags` event. 
+
+The script listens for `hashchange`. When the hash matches `#/tickets/showTicket/<id>`, the script waits for nyroModal's
+`.nyroModalCont` wrapper to render and injects a button into it. 
+
+The button uses the async clipboard API (with a `document.execCommand('copy')` fallback
 for non-HTTPS contexts) and flashes success / error styling for ~1.5 s.
 
 ## Install
 
-Enable the plugin from **Settings → Plugins**. The plugin's `install()` hook
+Enable the plugin from **Company Settings → Leantime Apps → My apps**. The plugin's `install()` hook
 symlinks `assets/copy-ticket-link.js` and `assets/copy-ticket-link.css` into
 `public/dist/` so the asset URLs resolve.
 
