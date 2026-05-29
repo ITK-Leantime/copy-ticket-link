@@ -64,7 +64,7 @@
     try {
       ok = document.execCommand('copy');
     } catch (err) {
-        console.error(err);
+      console.error(err);
       ok = false;
     }
     document.body.removeChild(ta);

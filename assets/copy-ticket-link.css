@@ -1,6 +1,6 @@
 .copy-ticket-textarea {
-    position: fixed;
-    opacity: 0;
+  position: fixed;
+  opacity: 0;
 }
 .copy-ticket-link-btn {
   display: inline-flex;
