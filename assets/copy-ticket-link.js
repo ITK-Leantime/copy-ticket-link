@@ -5,6 +5,7 @@
   const MODAL_SELECTOR = '.nyroModalCont';
   const ANCHOR_SELECTOR = '.nyroModalLink > div > small:first-of-type';
   const BUTTON_CLASS = 'copy-ticket-link-btn';
+  const TEXTAREA_CLASS = 'copy-ticket-textarea';
   const FEEDBACK_DURATION_MS = 1500;
 
   /**
@@ -51,19 +52,19 @@
         await navigator.clipboard.writeText(text);
         return true;
       } catch (err) {
-        /* fall through */
+        console.error(err);
       }
     }
     const ta = document.createElement('textarea');
     ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
+    ta.className = TEXTAREA_CLASS;
     document.body.appendChild(ta);
     ta.select();
-    let ok = false;
+    let ok;
     try {
       ok = document.execCommand('copy');
-    } catch (e) {
+    } catch (err) {
+        console.error(err);
       ok = false;
     }
     document.body.removeChild(ta);
