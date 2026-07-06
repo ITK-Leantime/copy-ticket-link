@@ -3,7 +3,11 @@
 
   const TICKET_HASH_PATTERN = /^#\/tickets\/showTicket\/(\d+)/;
   const MODAL_SELECTOR = '.nyroModalCont';
-  const ANCHOR_SELECTOR = '.nyroModalLink > div > small:first-of-type';
+  // The "Created by … | Last Updated" line. Anchor on its `tw-float-right`
+  // class rather than `:first-of-type`: subtasks render a parent-breadcrumb
+  // <small> ahead of this one, which would otherwise capture the button and
+  // push it to the top-left of the modal.
+  const ANCHOR_SELECTOR = '.nyroModalLink > div > small.tw-float-right';
   const BUTTON_CLASS = 'copy-ticket-link-btn';
   const TEXTAREA_CLASS = 'copy-ticket-textarea';
   const FEEDBACK_DURATION_MS = 1500;
